@@ -29,7 +29,7 @@ const UserSchema = new mongoose.Schema({
 
   isPayementMade: {
     type: Boolean,
-    Default: false,
+    default: false,
   },
 
   totalEarnings: {
