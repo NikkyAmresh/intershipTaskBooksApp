@@ -1,7 +1,7 @@
 # Internship Task BooksApp
 
 
-## In this codebase there is mainly 4 APIs are created
+## In this codebase there is mainly 5 APIs are created
 #### Create User
 
 1. **POST** `/register` 
@@ -34,7 +34,12 @@
 
     this api returns the status of current loggedin user.
     ___
-4. **PUT** `/secure/paymentHandler`
+
+4. **GET** `/secure/me`
+
+    this api returns current User Profile.
+    ___
+5. **PUT** `/secure/paymentHandler`
     this api verify the currect user and process the payment and reward 10 credits to its referrer user.
 
     ```json

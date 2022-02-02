@@ -6,5 +6,6 @@ module.exports = (app) => {
   const token = new Token(AREA.USER);
   app.use(token.verify);
   app.get("/", auth.isLoggedIn);
+  app.get("/me", auth.profile);
   app.put("/paymentHandler", paymentController.paymentHandler);
 };

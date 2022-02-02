@@ -68,5 +68,13 @@ const authControllers = {
       return res.status(401).send({ message: Messages.LOGIN.NOT_LOGGED_IN });
     }
   },
+
+  profile: async (req, res) => {
+    let user = await User.findOne(
+      { _id: req.user.id },
+      { password: 0, __v: 0 }
+    ).populate({ path: "referrerUser", select: ["_id", "name", "email"] });
+    res.status(200).send({ user });
+  },
 };
 module.exports = authControllers;
